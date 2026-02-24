@@ -211,29 +211,28 @@
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 24px;
-            margin-bottom: 50px;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         /* 工具卡片 */
         .tool-card {
-            display: block;
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--card-border);
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--card-border);
+  padding: 14px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
 
-        .tool-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(71, 11, 18, 0.15);
-            border-color: var(--primary-color);
-        }
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color);
+}
 
         .tool-header {
             padding: 20px;
@@ -268,18 +267,17 @@
             color: #f59e0b;
             font-size: 0.9rem;
         }
-
-        .tool-desc {
-            font-size: 14px;
-            color: var(--desc-color);
-            line-height: 1.4;
-            margin-bottom: 12px;
-            height: 40px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
+.tool-desc {
+  font-size: 13px;
+  color: var(--desc-color, #666);
+  line-height: 1.4;
+  margin-bottom: 8px;
+  height: 34px; /* 严格2行 */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 
         .tool-tags {
             display: flex;
@@ -438,6 +436,7 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+        
     </style>
 </head>
 
@@ -446,7 +445,7 @@
         <div class="top-bar">
             <a href="/index.html" class="logo">AI导航罗盘 · 热门推荐</a>
             <div class="func-buttons">
-                <a href="index.htm" class="back-home-btn">
+                <a href="index.html" class="back-home-btn">
                     <i class="fas fa-chevron-left"></i> 返回首页
                 </a>
                 <div class="language-switcher" tabindex="0">
@@ -463,6 +462,7 @@
         </div>
 
         <h1 class="page-title"><i class="fas fa-fire"></i> 热门AI工具推荐</h1>
+        
 
         <div class="filter-bar">
             <button class="filter-btn active">全部</button>
@@ -475,7 +475,7 @@
         <div class="tools-grid">
             <a href="https://www.doubao.com/" target="_blank" class="tool-card">
                 <span class="tool-status status-hot">热门</span>
-                <div class="tool-header"><img src="images/doubao.webp" alt="豆包"></div>
+                <div class="tool-header"><img src="images/doubao.svg" alt="豆包"></div>
                 <div class="tool-content">
                     <div class="tool-name">豆包 <span class="tool-rating"><i class="fas fa-star"></i> 4.9</span></div>
                     <div class="tool-desc">字节跳动推出的AI智能助手，支持多模态交互，完全免费使用。</div>
@@ -490,7 +490,7 @@
 
             <a href="https://www.kimi.com/" target="_blank" class="tool-card">
                 <span class="tool-status status-hot">热门</span>
-                <div class="tool-header"><img src="images/kimi.jpg" alt="Kimi"></div>
+                <div class="tool-header"><img src="images/kimi-icon.svg" alt="Kimi"></div>
                 <div class="tool-content">
                     <div class="tool-name">Kimi <span class="tool-rating"><i class="fas fa-star"></i> 4.8</span></div>
                     <div class="tool-desc">支持超长文本处理，百万字文档解析专家。</div>
@@ -505,7 +505,7 @@
 
             <a href="https://yuanbao.tencent.com/" target="_blank" class="tool-card">
                 <span class="tool-status status-free">免费</span>
-                <div class="tool-header"><img src="images/tengxun.jpg" alt="腾讯元宝"></div>
+                <div class="tool-header"><img src="images/tengxun.svg" alt="腾讯元宝"></div>
                 <div class="tool-content">
                     <div class="tool-name">腾讯元宝 <span class="tool-rating"><i class="fas fa-star"></i> 4.7</span></div>
                     <div class="tool-desc">整合腾讯生态服务，智能问答与高效创作。</div>
@@ -519,7 +519,7 @@
 
             <a href="https://wenxin.baidu.com/" target="_blank" class="tool-card">
                 <span class="tool-status status-freemium">免费+</span>
-                <div class="tool-header"><img src="images/wenxinyiyan.png" alt="文心一言"></div>
+                <div class="tool-header"><img src="images/wenxinyiyan.svg" alt="文心一言"></div>
                 <div class="tool-content">
                     <div class="tool-name">文心一言 <span class="tool-rating"><i class="fas fa-star"></i> 4.6</span></div>
                     <div class="tool-desc">百度大语言模型，强大的中文处理与多模态生成能力。</div>
@@ -547,7 +547,7 @@
 
             <a href="https://www.jimengai.com/" target="_blank" class="tool-card">
                 <span class="tool-status status-new">新工具</span>
-                <div class="tool-header"><img src="images/jimeng.webp" alt="即梦AI"></div>
+                <div class="tool-header"><img src="images/jimeng.svg" alt="即梦AI"></div>
                 <div class="tool-content">
                     <div class="tool-name">即梦AI <span class="tool-rating"><i class="fas fa-star"></i> 4.7</span></div>
                     <div class="tool-desc">专业级图像生成工具，文生图、风格迁移神器。</div>
